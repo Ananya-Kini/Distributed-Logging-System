@@ -33,6 +33,6 @@ After these initial IP configuration steps, we proceed to running the microservi
 
 1. Run ```python3 pubsub.py``` , ```python3 filterer.py``` ```python3 alertingsystem.py``` on three separate terminals in the consumer side. 
 
-2. Enter into the microservice(s) that you wish to use and run ```uvicorn main:app --reload``` in order to start the application. Go to ```127.0.0.1/docs``` for an easier interface to make requests. 
+2. Enter into the microservice(s) that you wish to use and run ```uvicorn main:app --reload --port <port_number>``` in order to start the application. Go to ```127.0.0.1/docs``` for an easier interface to make requests. 
 
 3. All the three Kafka consumers will display the logs on the terminals. PubSub model sends the logs to the particular topics : all_logs, critical_logs and node_failure.  Filterer displays all the logs except the heartbeat, and these logs are stored in Elasticsearch, and can be viewed in Kibana. Alerting System only displays the critical_logs and node_failure. 
