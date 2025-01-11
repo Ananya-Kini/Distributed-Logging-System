@@ -27,7 +27,7 @@ On the application side :
 
 1. Run ```sudo python3 fcGen.py "IP_ADDR" ``` on it and put the the IP address of the consumer. 
 
-2. Restart Fluentd using sudo systemctl restart fluentd
+2. Restart Fluentd using ```sudo systemctl restart fluentd```
 
 After these initial IP configuration steps, we proceed to running the microservice architecture and logging. 
 
